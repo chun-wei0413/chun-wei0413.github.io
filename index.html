@@ -1,8 +1,11 @@
 <!DOCTYPE html>
 <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
 <style>
-    .green-text {
-      color: green;
+    body {
+        background: rgb(27,27,27);
+    }
+    .white-text {
+      color: white;
     }
   
     h1 {
@@ -12,6 +15,44 @@
     p {
       font-size: 16px;
       font-family: monospace;
+    }
+    .container {
+        display: flex;
+        justify-content: center;
+        flex-wrap: nowrap;
+    }
+    .card {
+        backgound: white;
+        width: 220px;
+        border-radius: 15px;
+    }
+    .card-image {
+        height: 150px;
+        margin-bottom: 15px;
+        background-size: cover;
+        border-radius: 15px 15px 0 0;
+    }
+    .morgan {
+        background-image: url(https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/source-1-1566816393.gif?crop=1xw:1xh;center,top&resize=480:*);
+    }
+    .card p {
+        padding: 10px;
+    }
+    .card a {
+        background-color: black;
+        color: white;
+        padding: 15px 20px;
+        display: block;
+        text-align: center;
+        margin: 20px 50px;
+        text-decoration: none;
+    }
+    .card:hover {
+        background-color: rgb(62,62,62);
+        color: white;
+        cursor: pointer;
+        transform: scale(1.04);
+        transition: all is ease;
     }
   </style>
 <html lang="en">
@@ -23,24 +64,32 @@
     <title>test</title> 
 </head>
 <body>
-    <h1 style="color: blue;">Frank web</h1>
-    <h2 style="color: orange;">名字:李俊威(Chun-Wei Li)</h2>
+    <h1 class="white-text">Frank web</h1>
+    <h2 class="white-text">名字:李俊威(Chun-Wei Li)</h2>
     <p class="green-text">系級:資工二乙</p>
-    <p>興趣</p>
+    <div>
+    <p class="white-text">興趣</p>
     <ul>
-        <li>魔術方塊</li>
-        <li>桌球</li>
-        <li>籃球</li>
-        <li>玩電腦</li>
+        <li class="white-text">魔術方塊</li>
+        <li class="white-text">桌球</li>
+        <li class="white-text">籃球</li>
+        <li class="white-text">玩電腦</li>
     </ul>
-
-    <p>我的社群網站<a href="https://www.facebook.com/profile.php?id=100005144203887">
+    </div>
+    
+    <p class="white-text">我的社群網站<a href="https://www.facebook.com/profile.php?id=100005144203887" class="white-text">
     FB連結</a> 
-    <a href="https://www.instagram.com/frank_910413/">IG連結</a> 
+    <a href="https://www.instagram.com/frank_910413/" class="white-text">IG連結</a> 
     </p>
-    <p>最喜歡的演員</p>
-    <a href="#"><img src="https://cdn.britannica.com/40/144440-050-DA828627/Morgan-Freeman.jpg" width="25%" alt="摩根費利曼"></a>
-  
+    <section class="container">
+        <div class="card">
+            <div class="card-image morgan"></div>
+                <h2>摩根·費里曼</h2>
+                <p>摩根·費里曼是一位美國男演員、導演，曾分別獲得一次奧斯卡金像獎與金球獎。
+                    摩根·費里曼於90年代初成名，並演出過許多著名的好萊塢電影。</p>
+            <a href="">READ MORE</a>
+        </div>
+    </section>
 </body>
 
 </html>
